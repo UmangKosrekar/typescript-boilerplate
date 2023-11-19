@@ -1,0 +1,87 @@
+<!-- views/login.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #172522; /* Dark background color */
+            color: #feffff; /* Text color */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .login-container {
+            max-width: 400px;
+            width: 100%;
+            background-color: #2d3a45; /* Darker container background color */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Lighter box shadow */
+        }
+        h2 {
+            color: #feffff; /* Text color */
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+            color: #3aafa9; /* Primary color for labels */
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #4f5f6f; /* Border color for text boxes */
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: #2d3a45; /* Darker background color for text boxes */
+            color: #feffff; /* Text color */
+        }
+        button {
+            background-color: #3aafa9; /* Primary color for buttons */
+            color: #feffff; /* Text color */
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #172522; /* Darker hover color */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/login" method="post" onsubmit="return loginUser()">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function loginUser() {
+            // ... (unchanged JavaScript code)
+            return false;
+        }
+    </script>
+</body>
+</html>

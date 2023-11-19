@@ -4,7 +4,6 @@ import mongoose from "mongoose";
 dotenv.config({ path: path.join(__dirname, "../.env") });
 
 const main = () => {
-  console.log("process.env.DatabaseName", process.env.DatabaseName);
   mongoose
     .connect(`mongodb://localhost:27017/${process.env.DatabaseName}`)
     .then(() => {
